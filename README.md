@@ -1,11 +1,21 @@
 <p align="center">
   <a href="https://github.com/lauirvin/react-use-face-detection">
-    <img style="filter: invert(36%) sepia(63%) saturate(1829%) hue-rotate(175deg) brightness(82%) contrast(87%);" alt="logo" src="https://seeklogo.com/images/F/face-id-logo-6DA02A33C5-seeklogo.com.png" width="150" />
+    <img alt="logo" src="https://i.imgur.com/XSTefBB.png" width="150" />
   </a>
 </p>
 <h1 align="center">
   useFaceDetection Hook
 </h1>
+
+## <p align="center">[✨ Live Demo ✨](https://serene-meerkat-95a23d.netlify.app/)</p>
+
+## 💡 Usage
+
+- [Image Face Detection Code Example](https://github.com/lauirvin/react-use-face-detection-demo/blob/master/src/components/ImageDemo.tsx)
+
+- [React Webcam Face Detection Code Example](https://github.com/lauirvin/react-use-face-detection-demo/blob/master/src/components/WebcamDemo.tsx)
+
+- [Project Example](https://github.com/lauirvin/react-use-face-detection-demo)
 
 ## 🧰 Installation
 
@@ -25,13 +35,15 @@ yarn add react-use-face-detection
 
 ## ⚙️ Options
 
-| Name                 | Type                                                 | Description                                                                                                                                                                                      |
-| -------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| mirrored             | boolean \| undefined                                 | This enables a mirrored detection of the faces in the provided media source - e.g. if you flip the media source horizontally, this would enable the correct output of your flipped media source. |
-| handleOnResults      | (results: FaceDetectionResults) => void \| undefined | Callback function that returns the FaceDetectionResults                                                                                                                                          |
-| faceDetectionOptions | FaceDetectionOptions \| undefined                    | Options for configuring the face detection model - see https://google.github.io/mediapipe/solutions/face_detection.html#javascript-solution-api                                                  |
+| Name                 | Type                                     | Optional | Description                                                                                                                                                                                      |
+| -------------------- | ---------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| mirrored             | boolean                                  | true     | This enables a mirrored detection of the faces in the provided media source - e.g. if you flip the media source horizontally, this would enable the correct output of your flipped media source. |
+| handleOnResults      | (results: FaceDetectionResults) => void  | true     | Callback function that returns the FaceDetectionResults                                                                                                                                          |
+| faceDetectionOptions | FaceDetectionOptions                     | true     | Options for configuring the face detection model - see https://google.github.io/mediapipe/solutions/face_detection.html#javascript-solution-api                                                  |
+| faceDetection        | FaceDetection                            | false    | Initialize the face detection model from @mediapipe/face_detection                                                                                                                               |
+| camera               | (cameraOptions: CameraOptions) => Camera | true     | Initialize the camera utility model from @mediapipe/camera_utils                                                                                                                                 |
 
-## 🏹 Returned values
+## 🎁 Returned Values
 
 | Name          | Type                        | Description                                                                                              |
 | ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -39,7 +51,7 @@ yarn add react-use-face-detection
 | isLoading     | boolean                     | Returns a boolean that detects whether if the model has been loaded                                      |
 | detected      | boolean                     | Returns a boolean that detects whether if a face has been detected                                       |
 | facesDetected | number                      | Returns a number of faces that have been detected                                                        |
-| webcamRef     | RefObject<Webcam>           | Returns a ref object for the [react-webcam](https://www.npmjs.com/package/react-webcam) `<Webcam/>` node |
+| webcamRef     | LegacyRef<Webcam>           | Returns a ref object for the [react-webcam](https://www.npmjs.com/package/react-webcam) `<Webcam/>` node |
 | imgRef        | RefObject<HTMLImageElement> | Returns a ref object for the `<img/>` element                                                            |
 
 ## 👷 Built With
@@ -47,7 +59,7 @@ yarn add react-use-face-detection
 - [ReactJS](https://reactjs.org/) - Frontend Javascript web framework
 - [TypeScript](https://www.typescriptlang.org/) - Open-source language which builds on JavaScript
 - [MediaPipe](https://google.github.io/mediapipe/) - Machine Learning framework
-- [Jest](https://jestjs.io/) - JavaScript testing framework
+- [React Webcam](https://www.npmjs.com/package/react-webcam) - Webcam Library
 
 ## 📚 Author
 

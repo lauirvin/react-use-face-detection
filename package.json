@@ -1,6 +1,6 @@
 {
   "name": "react-use-face-detection",
-  "version": "0.0.10",
+  "version": "1.0.0",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
@@ -17,7 +17,8 @@
     "prepublishOnly": "yarn build",
     "add:react": "node scripts/add_react",
     "rm:react": "node scripts/remove_react",
-    "link:react": "yarn link \"react\" \"react-dom\" && yarn rm:react"
+    "link:react": "yarn link \"react\" \"react-dom\" && yarn rm:react",
+    "release": "standard-version"
   },
   "keywords": [
     "React",
@@ -45,7 +46,8 @@
     "@mediapipe/camera_utils": "^0.3.1640029074",
     "@mediapipe/face_detection": "^0.4.1646425229",
     "@testing-library/react": "^10.0.2",
-    "react-webcam": "^7.0.1"
+    "react-webcam": "^7.0.1",
+    "standard-version": "^9.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
