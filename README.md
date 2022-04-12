@@ -7,7 +7,11 @@
   useFaceDetection Hook
 </h1>
 
-## <p align="center">[✨ Live Demo ✨](https://serene-meerkat-95a23d.netlify.app/)</p>
+# <p align="center">[✨ Live Demo ✨](https://serene-meerkat-95a23d.netlify.app/)</p>
+
+## 📚 Introduction
+
+Simple React Hook to detect faces from an HTMLImageElement or [react-webcam](https://www.npmjs.com/package/react-webcam) video source. Powered by [MediaPipe](https://google.github.io/mediapipe/)
 
 ## 💡 Usage
 
