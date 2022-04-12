@@ -13,22 +13,17 @@ export default {
       format: 'cjs',
       sourcemap: true,
     },
-    {
-      file: packageJson.module,
-      format: 'esm',
-      sourcemap: true,
-    },
   ],
   plugins: [
     peerDepsExternal(),
+    commonjs(),
     resolve(),
-    commonjs({
-      namedExports: {
-        'node_modules/@mediapipe/face_detection/face_detection.js': ['FaceDetection', 'Results', 'NormalizeRect'],
-        'node_modules/@mediapipe/camera_utils/camera_utils.js': ['Camera'],
+    typescript({
+      useTsconfigDeclarationDir: true,
+      tsconfigOverride: {
+        esModuleInterop: true,
       },
     }),
-    typescript({ useTsconfigDeclarationDir: true }),
     terser(),
   ],
 };
