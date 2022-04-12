@@ -52,7 +52,7 @@ export const useFaceDetection = (props?: IFaceDetectionOptions): IFaceDetectionR
       faceDetection.onResults(onResults);
 
       /** Handle webcam detection */
-      if (mediaSrc instanceof HTMLVideoElement) {
+      if (mediaSrc instanceof HTMLVideoElement && camera) {
         const cameraConfig = {
           mediaSrc,
           width: mediaSrc.videoWidth,

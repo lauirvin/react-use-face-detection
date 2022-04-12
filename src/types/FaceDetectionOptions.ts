@@ -18,5 +18,5 @@ export interface IFaceDetectionOptions {
   handleOnResults?: (results: FaceDetectionResults) => void;
   faceDetectionOptions?: FaceDetectionOptions;
   faceDetection: FaceDetection;
-  camera: ICamera;
+  camera?: ICamera;
 }
