@@ -1,13 +1,13 @@
 {
   "name": "react-use-face-detection",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
     "build"
   ],
   "types": "build/index.d.ts",
-  "description": "Face detection React hook powered by @mediapipe/face_detection",
+  "description": "Face detection React hook powered by @mediapipe/face_detection, @mediapipe/camera_utils, react-webcam",
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
@@ -23,14 +23,20 @@
     "React",
     "Library",
     "Rollup",
-    "Typescript"
+    "Typescript",
+    "Face Detection",
+    "Face",
+    "Hooks",
+    "@mediapipe/face_detection",
+    "Machine Learning",
+    "MediaPipe"
   ],
   "author": "Irvin Ives Lau",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lauirvin/react-component-library-typescript-boilerplate/issues"
+    "url": "https://github.com/lauirvin/react-use-face-detection/issues"
   },
-  "homepage": "https://github.com/lauirvin/react-component-library-typescript-boilerplate",
+  "homepage": "https://github.com/lauirvin/react-use-face-detection",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"

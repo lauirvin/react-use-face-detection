@@ -4,8 +4,8 @@ import { FaceDetection, Results, NormalizedRect } from '@mediapipe/face_detectio
 import { Camera } from '@mediapipe/camera_utils';
 import { IFaceDetectionOptions, IFaceDetectionReturnType } from './types';
 
-const useFaceDetection = (props?: IFaceDetectionOptions): IFaceDetectionReturnType => {
-  const { mirrored, handleOnResults, faceDetectionOptions: options } = props || ({} as IFaceDetectionOptions);
+const useFaceDetection = (config?: IFaceDetectionOptions): IFaceDetectionReturnType => {
+  const { mirrored, handleOnResults, faceDetectionOptions: options } = config || ({} as IFaceDetectionOptions);
 
   /** Bounding Box for element to use, e.g. can create a bounding box with these values using a div  */
   const [boundingBox, setBoundingBox] = useState<NormalizedRect[]>([]);
