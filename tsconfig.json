@@ -16,8 +16,5 @@
   "exclude": [
     "node_modules",
     "build",
-    "storybook-static",
-    "src/**/*.stories.tsx",
-    "src/**/*.test.tsx",
   ]
 }

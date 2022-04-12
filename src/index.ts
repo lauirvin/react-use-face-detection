@@ -1,1 +1,5 @@
-export * from './components';
+const useFaceDetection = () => {
+  console.log('hi');
+};
+
+export default useFaceDetection;
