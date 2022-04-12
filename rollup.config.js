@@ -19,5 +19,16 @@ export default {
       sourcemap: true,
     },
   ],
-  plugins: [peerDepsExternal(), resolve(), commonjs(), typescript({ useTsconfigDeclarationDir: true }), terser()],
+  plugins: [
+    peerDepsExternal(),
+    resolve(),
+    commonjs({
+      namedExports: {
+        'node_modules/@mediapipe/face_detection/face_detection.js': ['FaceDetection', 'Results', 'NormalizeRect'],
+        'node_modules/@mediapipe/camera_utils/camera_utils.js': ['Camera'],
+      },
+    }),
+    typescript({ useTsconfigDeclarationDir: true }),
+    terser(),
+  ],
 };
