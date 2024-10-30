@@ -83,7 +83,29 @@ export const useFaceDetection = (props?: IFaceDetectionOptions): IFaceDetectionR
     if (imgRef.current) {
       handleFaceDetection(imgRef.current);
     }
-  }, [handleFaceDetection, isLoading, onResults]);
+
+    const videoElement = webcamRef?.current?.video;
+
+    return () => {
+      if (!videoElement) return;
+
+      if (videoElement && videoElement.srcObject) {
+        const stream = videoElement.srcObject as MediaStream;
+        if (stream) {
+          stream.getTracks().forEach((track) => track.stop());
+        }
+      }
+
+      if (!camera) return;
+
+      camera({
+        mediaSrc: videoElement,
+        onFrame: () => Promise.resolve(),
+        width: videoElement.videoWidth,
+        height: videoElement.videoHeight,
+      }).stop();
+    };
+  }, [handleFaceDetection, isLoading, onResults, camera]);
 
   return {
     boundingBox,
